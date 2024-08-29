@@ -124,7 +124,7 @@ plugins {
 configure<io.github.surpsg.deltacoverage.gradle.DeltaCoverageConfiguration> {
     coverage.engine = CoverageEngine.INTELLIJ // See parameters description for more info
 
-    git.compareWith("refs/remotes/origin/main")
+    diffSource.git.compareWith("refs/remotes/origin/main")
 
     violationRules.failIfCoverageLessThan(0.9)
 
